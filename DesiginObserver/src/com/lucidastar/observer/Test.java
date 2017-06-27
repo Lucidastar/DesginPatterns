@@ -15,10 +15,10 @@ public class Test {
 		    weather.addObserver(new Orcs());
 		    weather.addObserver(new Hobbits());
 
-//		    weather.timePasses();
-//		    weather.timePasses();
-//		    weather.timePasses();
-//		    weather.timePasses();
+		    weather.timePasses();
+		    weather.timePasses();
+		    weather.timePasses();
+		    weather.timePasses();
 		    
 		    
 		    GWeather gWeather = new GWeather();
