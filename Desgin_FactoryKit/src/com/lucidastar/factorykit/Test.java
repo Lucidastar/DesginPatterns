@@ -11,6 +11,7 @@ public class Test {
 		    });
 		    Weapon axe = factory.create(WeaponType.BOW);//根据类型创造兵器
 		    System.out.println(axe.toString());
+		    System.out.println();
 	}
 
 }

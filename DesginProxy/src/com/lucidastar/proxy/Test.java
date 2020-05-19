@@ -2,10 +2,14 @@ package com.lucidastar.proxy;
 
 import com.lucidastar.proxy.statics.*;
 
+import java.io.File;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.math.BigDecimal;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
 
 public class Test {
     public static void main(String[] args) {
@@ -19,6 +23,13 @@ public class Test {
 //        wizardTower.enter(new Wizard("pink wizard"));
 //        testDynamic();
         test();
+
+        System.out.println("ivoryTower's ClassLoader is " + IvoryTower.class.getClassLoader());
+        System.out.println("The Parent of IvoryTower's ClassLoader is " + IvoryTower.class.getClassLoader().getParent());
+        System.out.println("The GrandParent of IvoryTower's ClassLoader is " + IvoryTower.class.getClassLoader().getParent().getParent());
+
+        System.out.println("The String of URLClassLoader 's ClassLoader is " + URLClassLoader.class.getClassLoader());
+        System.out.println("The Thread of IvoryTower's ClassLoader is " + Thread.class.getClassLoader());
     }
 
     public static void testDynamic(){
@@ -27,6 +38,9 @@ public class Test {
         wizardTower.enter(new Wizard("red wizard"));
         wizardTower.result();
         wizardTower.showName("hello");
+
+
+
 //        System.out.println(wizardTower.getClass().getName());
     }
 

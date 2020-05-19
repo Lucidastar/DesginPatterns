@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DesginBuilder.iml" filepath="$PROJECT_DIR$/DesginBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesginProxy/DesginProxy.iml" filepath="$PROJECT_DIR$/DesginProxy/DesginProxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesginSingleton.iml" filepath="$PROJECT_DIR$/DesginSingleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desgin_Factory.iml" filepath="$PROJECT_DIR$/Desgin_Factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desgin_FactoryKit.iml" filepath="$PROJECT_DIR$/Desgin_FactoryKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesiginCallback.iml" filepath="$PROJECT_DIR$/DesiginCallback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesiginObserver.iml" filepath="$PROJECT_DIR$/DesiginObserver.iml" />
+    </modules>
+  </component>
+</project>
