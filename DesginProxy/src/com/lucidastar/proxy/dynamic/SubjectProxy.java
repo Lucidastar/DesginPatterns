@@ -16,6 +16,7 @@ public class SubjectProxy implements InvocationHandler {
         if (method.getName().equals("say")){//
             System.out.println("这是做一些操作，而不需要修改Subject的实现");
         }
+        System.out.println("方法中的proxy"+proxy.getClass().getName());
         return method.invoke(mSubject,args);
     }
 }
