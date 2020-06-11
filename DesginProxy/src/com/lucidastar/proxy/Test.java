@@ -15,21 +15,14 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("代理模式");
         IvoryTower ivoryTower = new IvoryTower();
-        OtherTower otherTower = new OtherTower();
-        WizardTower wizardTower = new IvoryTowerProxy(otherTower);
-//        wizardTower.enter(new Wizard("red wizard"));
-//        wizardTower.enter(new Wizard("black wizard"));
-//        wizardTower.enter(new Wizard("green wizard"));
-//        wizardTower.enter(new Wizard("pink wizard"));
+//        OtherTower otherTower = new OtherTower();
+        WizardTower wizardTower = new IvoryTowerProxy(ivoryTower);
+        wizardTower.enter(new Wizard("red wizard"));
+        wizardTower.enter(new Wizard("black wizard"));
+        wizardTower.enter(new Wizard("green wizard"));
+        wizardTower.enter(new Wizard("pink wizard"));
 //        testDynamic();
-        test();
 
-        System.out.println("ivoryTower's ClassLoader is " + IvoryTower.class.getClassLoader());
-        System.out.println("The Parent of IvoryTower's ClassLoader is " + IvoryTower.class.getClassLoader().getParent());
-        System.out.println("The GrandParent of IvoryTower's ClassLoader is " + IvoryTower.class.getClassLoader().getParent().getParent());
-
-        System.out.println("The String of URLClassLoader 's ClassLoader is " + URLClassLoader.class.getClassLoader());
-        System.out.println("The Thread of IvoryTower's ClassLoader is " + Thread.class.getClassLoader());
     }
 
     public static void testDynamic(){
@@ -63,30 +56,6 @@ public class Test {
         }
     }
 
-    public static void test(){
-        String data = "233";
-        String result = "";
-        if (data.contains(".")){
-            BigDecimal   bd   =   new BigDecimal(data);
-            bd   =   bd.setScale(2,BigDecimal.ROUND_DOWN);
-
-//            System.out.println(bd.toString());
-        }else {
-            result = new StringBuilder(data).append(".00").toString();
-        }
-
-//        System.out.println(result);
-
-        String test = "http://weixin.qiuyouzone.com/WXGZPT/html/gyy_h5/player_rank/rank_index.html?area=上海市&city=北京市&ballType=1&filt=2";
-        if (test.contains("?")){
-            int length = test.length();
-            String substring = test.substring(test.lastIndexOf("?"), length);
-            String[] split = test.split("\\?");
-            System.out.println(split[0]);
-            System.out.println(split[1]);
-            System.out.println(substring);
-        }
-    }
 
 
 }

@@ -3,7 +3,7 @@ package com.lucidastar.proxy.statics;
 public class OtherTower implements WizardTower {
     @Override
     public void enter(Wizard wizard) {
-        System.out.println(wizard.toString()+"enter wizard");
+        System.out.println(wizard.toString()+"   enter wizard");
     }
 
     @Override
